@@ -46,12 +46,22 @@ public class Tarea2 {
         }
         return resp;
     }
+    public static String sinEspacios(String palabra){
+        String resp = "";
+        for (int i =0; i<=palabra.length()-1;i++){
+            if(palabra.charAt(i)!= ' '){
+                resp = resp+palabra.charAt(i);
+            }            
+        }
+        return resp;
+    }
     
     public static void main(String[] args) {
         // TODO code application logic here
         //System.out.println("casa");
         //System.out.println(posicion("casa",'s'));
-        System.out.println(comparacion("casa","cassa"));
+        //System.out.println(comparacion("casa","cassa"));
+        System.out.println(sinEspacios("el perro de Lola"));
     }
     
 }

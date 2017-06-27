@@ -11,11 +11,18 @@ package tarea2;
  */
 public class Tarea2 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
+public static String invertir (String str){
+    String resp= "";
+    for(int i = str.length()-1; i>=0;i--){
+        resp = resp + str.charAt(i);
+    }
+    return resp;
+}
+
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println(invertir("casa"));
     }
     
 }

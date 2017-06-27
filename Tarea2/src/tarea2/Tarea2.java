@@ -21,11 +21,11 @@ public class Tarea2 {
     }
     
     public static int posicion(String palabra, char letra){
-        int resp=0;
-        for(int i = palabra.length()-1; i>=0;i--){
+        int resp =-1;
+        for(int i = 0; i<=palabra.length()-1;i++){
             char letraP = palabra.charAt(i);
-            if(letra == letraP)){
-                return i;
+            if(letra==letraP){
+                resp = i+1;
             }
         }
         return resp;
@@ -33,7 +33,8 @@ public class Tarea2 {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println(invertir("casa"));
+        //System.out.println("casa");
+        System.out.println(posicion("casa",'s'));
     }
     
 }

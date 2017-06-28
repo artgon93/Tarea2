@@ -46,12 +46,25 @@ public class Tarea2 {
         }
         return resp;
     }
-    public static String sinEspacios(String palabra){
+    
+    public static String sinEspacios(String frase){
         String resp = "";
-        for (int i =0; i<=palabra.length()-1;i++){
-            if(palabra.charAt(i)!= ' '){
-                resp = resp+palabra.charAt(i);
+        for (int i =0; i<=frase.length()-1;i++){
+            if(frase.charAt(i)!= ' '){
+                resp = resp+frase.charAt(i);
             }            
+        }
+        return resp;
+    }
+    public static String sinRepetidas(String frase){
+        String resp = "";
+        for (int i=0; i<=frase.length()-1;i++){
+            char letra1 = frase.charAt(i);
+            for (int j=0; j<= frase.length()-1;j++){
+                if(frase.charAt(j)!= letra1){
+                    resp = resp+frase.charAt(j);
+                } 
+            }
         }
         return resp;
     }
@@ -61,7 +74,9 @@ public class Tarea2 {
         //System.out.println("casa");
         //System.out.println(posicion("casa",'s'));
         //System.out.println(comparacion("casa","cassa"));
-        System.out.println(sinEspacios("el perro de Lola"));
+        //System.out.println(sinEspacios("el perro de Lola"));
+        System.out.println(sinRepetidas("caa"));
+        
     }
     
 }
